@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Dml2OvxV1s2WfmHOEw1746b2YkPW5iZWdUby6o/8PmOj6SLXetYpGtGdjzk2lx2Z5GBNazUGGp3m8L23pEdlVA==",
+  "dgSpecHash": "YuefRWpA8LzSGPtAVnNi83z68Ta6Hx4sV8dq4T1jaxJ6f1wzjd+Ib1OMxt9CJ1sRjX2IHw9KY/mQ5N+nMEU24Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\houda\\source\\repos\\Tutorials\\Drivers_License_Issuance_And_Management_System\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\houda\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.5\\guna.ui2.winforms.2.0.4.5.nupkg.sha512",
+    "C:\\Users\\houda\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\houda\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\houda\\source\\repos\\Tutorials\\Drivers_License_Issuance_And_Management_System\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj": {}
+    "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\houda\\source\\repos\\Tutorials\\Drivers_License_Issuance_And_Management_System\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj": {
+    "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\houda\\source\\repos\\Tutorials\\Drivers_License_Issuance_And_Management_System\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj",
+        "projectUniqueName": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj",
         "projectName": "Presentation_Layer_Windows_App",
-        "projectPath": "C:\\Users\\houda\\source\\repos\\Tutorials\\Drivers_License_Issuance_And_Management_System\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj",
+        "projectPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj",
         "packagesPath": "C:\\Users\\houda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\houda\\source\\repos\\Tutorials\\Drivers_License_Issuance_And_Management_System\\Presentation_Layer_Windows_App\\obj\\",
+        "outputPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Presentation_Layer_Windows_App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\houda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
+          "dependencies": {
+            "Guna.UI2.WinForms": {
+              "target": "Package",
+              "version": "[2.0.4.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

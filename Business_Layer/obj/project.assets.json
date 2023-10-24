@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\houda\\source\\repos\\Tutorials\\Drivers_License_Issuance_And_Management_System\\Business_Layer\\Business_Layer.csproj",
+      "projectUniqueName": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Business_Layer\\Business_Layer.csproj",
       "projectName": "Business_Layer",
-      "projectPath": "C:\\Users\\houda\\source\\repos\\Tutorials\\Drivers_License_Issuance_And_Management_System\\Business_Layer\\Business_Layer.csproj",
+      "projectPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Business_Layer\\Business_Layer.csproj",
       "packagesPath": "C:\\Users\\houda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\houda\\source\\repos\\Tutorials\\Drivers_License_Issuance_And_Management_System\\Business_Layer\\obj\\",
+      "outputPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Business_Layer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\houda\\AppData\\Roaming\\NuGet\\NuGet.Config",
