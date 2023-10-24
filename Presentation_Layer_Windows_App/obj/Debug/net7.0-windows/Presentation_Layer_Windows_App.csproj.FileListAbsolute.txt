@@ -23,7 +23,6 @@ C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_
 C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\bin\Debug\net7.0-windows\System.Management.dll
 C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\bin\Debug\net7.0-windows\runtimes\win\lib\net7.0\System.Management.dll
 C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\obj\Debug\net7.0-windows\Presentation_Layer_Windows_App.csproj.AssemblyReference.cache
-C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\obj\Debug\net7.0-windows\Presentation_Layer_Windows_App.frm_Main.resources
 C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\obj\Debug\net7.0-windows\Presentation_Layer_Windows_App.csproj.GenerateResource.cache
 C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\obj\Debug\net7.0-windows\Presentation_Layer_Windows_App.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\obj\Debug\net7.0-windows\Presentation_Layer_Windows_App.AssemblyInfoInputs.cache
@@ -36,3 +35,5 @@ C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_
 C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\obj\Debug\net7.0-windows\Presentation_Layer_Windows_App.genruntimeconfig.cache
 C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\obj\Debug\net7.0-windows\ref\Presentation_Layer_Windows_App.dll
 C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\obj\Debug\net7.0-windows\Presentation_Layer_Windows_App.frm_Login.resources
+C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\obj\Debug\net7.0-windows\Presentation_Layer_Windows_App.Properties.Resources.resources
+C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\obj\Debug\net7.0-windows\Presentation_Layer_Windows_App.frm_Main.resources
