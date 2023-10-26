@@ -30,7 +30,7 @@ namespace Presentation_Layer_Windows_App.Testing
 
         private void pnl_LoginWindow_LocationChanged(object sender, EventArgs e)
         {
-            if (pnl_Main.Width / 2 <= pnl_LoginWindow.Width + 20)
+            if (pnl_Main.Width / 2 <= pnl_LoginWindow.Width + 60)
             {
                 pnl_Left.Visible = false;
             }

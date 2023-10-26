@@ -94,7 +94,7 @@
             pnl_LoginWindow.Controls.Add(guna2TextBox1);
             pnl_LoginWindow.Controls.Add(label1);
             pnl_LoginWindow.FillColor = Color.FromArgb(44, 44, 44);
-            pnl_LoginWindow.Location = new Point(105, 155);
+            pnl_LoginWindow.Location = new Point(115, 165);
             pnl_LoginWindow.Name = "pnl_LoginWindow";
             pnl_LoginWindow.Padding = new Padding(10, 13, 10, 13);
             pnl_LoginWindow.Radius = 12;
@@ -102,13 +102,14 @@
             pnl_LoginWindow.ShadowDepth = 200;
             pnl_LoginWindow.ShadowShift = 8;
             pnl_LoginWindow.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            pnl_LoginWindow.Size = new Size(510, 643);
+            pnl_LoginWindow.Size = new Size(490, 623);
             pnl_LoginWindow.TabIndex = 1;
             pnl_LoginWindow.LocationChanged += pnl_LoginWindow_LocationChanged;
             pnl_LoginWindow.Resize += Form1_Resize;
             // 
             // guna2Button1
             // 
+            guna2Button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2Button1.Animated = true;
             guna2Button1.CustomizableEdges = customizableEdges1;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
@@ -118,7 +119,7 @@
             guna2Button1.FillColor = Color.FromArgb(255, 209, 0);
             guna2Button1.Font = new Font("Arial", 23F, FontStyle.Bold, GraphicsUnit.Pixel);
             guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Location = new Point(40, 470);
+            guna2Button1.Location = new Point(27, 470);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button1.Size = new Size(431, 44);
@@ -127,10 +128,11 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Pixel);
             label4.ForeColor = Color.FromArgb(213, 213, 213);
-            label4.Location = new Point(40, 414);
+            label4.Location = new Point(27, 414);
             label4.Name = "label4";
             label4.Size = new Size(153, 21);
             label4.TabIndex = 4;
@@ -138,10 +140,11 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Arial", 12.8F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(40, 316);
+            label3.Location = new Point(27, 316);
             label3.Name = "label3";
             label3.Size = new Size(116, 26);
             label3.TabIndex = 3;
@@ -149,6 +152,7 @@
             // 
             // guna2TextBox2
             // 
+            guna2TextBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2TextBox2.BorderRadius = 4;
             guna2TextBox2.CustomizableEdges = customizableEdges3;
             guna2TextBox2.DefaultText = "";
@@ -161,7 +165,7 @@
             guna2TextBox2.Font = new Font("Calibri Light", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             guna2TextBox2.ForeColor = Color.White;
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(255, 209, 0);
-            guna2TextBox2.Location = new Point(40, 352);
+            guna2TextBox2.Location = new Point(27, 352);
             guna2TextBox2.Margin = new Padding(10);
             guna2TextBox2.Name = "guna2TextBox2";
             guna2TextBox2.PasswordChar = '●';
@@ -175,10 +179,11 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 12.8F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(40, 190);
+            label2.Location = new Point(27, 190);
             label2.Name = "label2";
             label2.Size = new Size(60, 26);
             label2.TabIndex = 1;
@@ -186,6 +191,7 @@
             // 
             // guna2TextBox1
             // 
+            guna2TextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2TextBox1.BorderRadius = 4;
             guna2TextBox1.CustomizableEdges = customizableEdges5;
             guna2TextBox1.DefaultText = "";
@@ -198,7 +204,7 @@
             guna2TextBox1.Font = new Font("Calibri Light", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             guna2TextBox1.ForeColor = Color.White;
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(255, 209, 0);
-            guna2TextBox1.Location = new Point(40, 226);
+            guna2TextBox1.Location = new Point(27, 226);
             guna2TextBox1.Margin = new Padding(10);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
@@ -212,12 +218,13 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Font = new Font("Arial", 40.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Arial", 37.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(148, 60);
+            label1.Location = new Point(145, 63);
             label1.Name = "label1";
-            label1.Size = new Size(221, 79);
+            label1.Size = new Size(202, 73);
             label1.TabIndex = 0;
             label1.Text = "Login";
             // 
@@ -232,13 +239,13 @@
             pnl_Left.Size = new Size(720, 953);
             pnl_Left.TabIndex = 0;
             // 
-            // ucTest
+            // ucLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(pnl_Main);
             Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            Name = "ucTest";
+            Name = "ucLogin";
             Size = new Size(1440, 953);
             pnl_Main.ResumeLayout(false);
             pnl_Right.ResumeLayout(false);

@@ -55,7 +55,7 @@
             pnl_Header.Dock = DockStyle.Top;
             pnl_Header.Location = new Point(4, 4);
             pnl_Header.Name = "pnl_Header";
-            pnl_Header.Size = new Size(1101, 40);
+            pnl_Header.Size = new Size(1592, 40);
             pnl_Header.TabIndex = 1;
             // 
             // guna2ControlBox1
@@ -68,7 +68,7 @@
             guna2ControlBox1.HoverState.FillColor = Color.FromArgb(255, 209, 0);
             guna2ControlBox1.HoverState.IconColor = Color.FromArgb(30, 30, 30);
             guna2ControlBox1.IconColor = Color.FromArgb(255, 209, 0);
-            guna2ControlBox1.Location = new Point(897, 0);
+            guna2ControlBox1.Location = new Point(1388, 0);
             guna2ControlBox1.Name = "guna2ControlBox1";
             guna2ControlBox1.PressedColor = Color.FromArgb(95, 95, 95);
             guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -85,7 +85,7 @@
             guna2ControlBox2.HoverState.FillColor = Color.FromArgb(255, 209, 0);
             guna2ControlBox2.HoverState.IconColor = Color.FromArgb(30, 30, 30);
             guna2ControlBox2.IconColor = Color.FromArgb(255, 209, 0);
-            guna2ControlBox2.Location = new Point(965, 0);
+            guna2ControlBox2.Location = new Point(1456, 0);
             guna2ControlBox2.Name = "guna2ControlBox2";
             guna2ControlBox2.PressedColor = Color.FromArgb(95, 95, 95);
             guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -101,7 +101,7 @@
             guna2ControlBox3.HoverState.FillColor = Color.Red;
             guna2ControlBox3.HoverState.IconColor = Color.FromArgb(30, 30, 30);
             guna2ControlBox3.IconColor = Color.FromArgb(255, 209, 0);
-            guna2ControlBox3.Location = new Point(1033, 0);
+            guna2ControlBox3.Location = new Point(1524, 0);
             guna2ControlBox3.Name = "guna2ControlBox3";
             guna2ControlBox3.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2ControlBox3.Size = new Size(68, 40);
@@ -112,7 +112,7 @@
             pnl_MainContainer.Dock = DockStyle.Fill;
             pnl_MainContainer.Location = new Point(4, 44);
             pnl_MainContainer.Name = "pnl_MainContainer";
-            pnl_MainContainer.Size = new Size(1101, 528);
+            pnl_MainContainer.Size = new Size(1592, 852);
             pnl_MainContainer.TabIndex = 2;
             // 
             // guna2DragControl1
@@ -132,19 +132,19 @@
             // 
             guna2ShadowForm1.TargetForm = this;
             // 
-            // frm_TestContainer
+            // frm_Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 30);
-            ClientSize = new Size(1109, 576);
+            ClientSize = new Size(1600, 900);
             Controls.Add(pnl_MainContainer);
             Controls.Add(pnl_Header);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frm_TestContainer";
+            MinimumSize = new Size(600, 740);
+            Name = "frm_Main";
             Padding = new Padding(4);
             Text = "frm_TestContainer";
-            Load += frm_TestContainer_Load;
             pnl_Header.ResumeLayout(false);
             ResumeLayout(false);
         }

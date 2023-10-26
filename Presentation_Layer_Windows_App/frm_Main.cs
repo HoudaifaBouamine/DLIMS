@@ -16,7 +16,7 @@ namespace Presentation_Layer_Windows_App.Testing
         {
             InitializeComponent();
 
-            //
+            // Resizing window
             this.FormBorderStyle = FormBorderStyle.None;
             this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.ResizeRedraw, true);
@@ -28,7 +28,7 @@ namespace Presentation_Layer_Windows_App.Testing
             test.Show();
         }
 
-
+        #region Resizing window
         protected override void OnPaint(PaintEventArgs e) // you can safely omit this method if you want
         {
             Brush b = new SolidBrush(Color.FromArgb(30, 30, 30));
@@ -85,9 +85,8 @@ namespace Presentation_Layer_Windows_App.Testing
             }
         }
 
-        private void frm_TestContainer_Load(object sender, EventArgs e)
-        {
+        #endregion
 
-        }
+
     }
 }
