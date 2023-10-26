@@ -8,8 +8,6 @@ namespace Clock
 {
     static internal class clsGlobal
     {
-        
-
-        
+           
     }
 }
