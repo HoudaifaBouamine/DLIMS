@@ -6,14 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "Presentation_Layer_Windows_App/1.0.0": {
+      "UserControls/1.0.0": {
         "dependencies": {
-          "Business_Layer": "1.0.0",
-          "Guna.UI2.WinForms": "2.0.4.5",
-          "UserControls": "1.0.0"
+          "Guna.UI2.WinForms": "2.0.4.5"
         },
         "runtime": {
-          "Presentation_Layer_Windows_App.dll": {}
+          "UserControls.dll": {}
         }
       },
       "Guna.UI2.WinForms/2.0.4.5": {
@@ -46,24 +44,11 @@
             "fileVersion": "7.0.22.51805"
           }
         }
-      },
-      "Business_Layer/1.0.0": {
-        "runtime": {
-          "Business_Layer.dll": {}
-        }
-      },
-      "UserControls/1.0.0": {
-        "dependencies": {
-          "Guna.UI2.WinForms": "2.0.4.5"
-        },
-        "runtime": {
-          "UserControls.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "Presentation_Layer_Windows_App/1.0.0": {
+    "UserControls/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -88,16 +73,6 @@
       "sha512": "sha512-A4jed4QUviDOm7fJNKAJObEAEkEUXmkGL/w0iyCYTzrl1rezTj8LGFHfsVst4Vb9JwFcTpboiDrvdST48avBpw==",
       "path": "system.management/7.0.0",
       "hashPath": "system.management.7.0.0.nupkg.sha512"
-    },
-    "Business_Layer/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "UserControls/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

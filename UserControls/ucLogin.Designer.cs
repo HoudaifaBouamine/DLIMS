@@ -1,4 +1,4 @@
-﻿namespace Presentation_Layer_Windows_App.Testing
+﻿namespace UserControls
 {
     partial class ucLogin
     {
@@ -43,12 +43,13 @@
             pnl_Main = new Guna.UI2.WinForms.Guna2Panel();
             pnl_Right = new Guna.UI2.WinForms.Guna2Panel();
             pnl_LoginWindow = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            linkLabel1 = new LinkLabel();
+            btn_Login = new Guna.UI2.WinForms.Guna2Button();
             label4 = new Label();
             label3 = new Label();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            tb_Password = new Guna.UI2.WinForms.Guna2TextBox();
             label2 = new Label();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            tb_Email = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
             pnl_Left = new Guna.UI2.WinForms.Guna2Panel();
             pnl_Main.SuspendLayout();
@@ -86,12 +87,13 @@
             // 
             pnl_LoginWindow.Anchor = AnchorStyles.None;
             pnl_LoginWindow.BackColor = Color.Transparent;
-            pnl_LoginWindow.Controls.Add(guna2Button1);
+            pnl_LoginWindow.Controls.Add(linkLabel1);
+            pnl_LoginWindow.Controls.Add(btn_Login);
             pnl_LoginWindow.Controls.Add(label4);
             pnl_LoginWindow.Controls.Add(label3);
-            pnl_LoginWindow.Controls.Add(guna2TextBox2);
+            pnl_LoginWindow.Controls.Add(tb_Password);
             pnl_LoginWindow.Controls.Add(label2);
-            pnl_LoginWindow.Controls.Add(guna2TextBox1);
+            pnl_LoginWindow.Controls.Add(tb_Email);
             pnl_LoginWindow.Controls.Add(label1);
             pnl_LoginWindow.FillColor = Color.FromArgb(44, 44, 44);
             pnl_LoginWindow.Location = new Point(115, 165);
@@ -103,28 +105,46 @@
             pnl_LoginWindow.ShadowShift = 8;
             pnl_LoginWindow.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
             pnl_LoginWindow.Size = new Size(490, 623);
-            pnl_LoginWindow.TabIndex = 1;
+            pnl_LoginWindow.TabIndex = 0;
             pnl_LoginWindow.LocationChanged += pnl_LoginWindow_LocationChanged;
             pnl_LoginWindow.Resize += Form1_Resize;
             // 
-            // guna2Button1
+            // linkLabel1
             // 
-            guna2Button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2Button1.Animated = true;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(255, 209, 0);
-            guna2Button1.Font = new Font("Arial", 23F, FontStyle.Bold, GraphicsUnit.Pixel);
-            guna2Button1.ForeColor = Color.Black;
-            guna2Button1.Location = new Point(27, 470);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(431, 44);
-            guna2Button1.TabIndex = 5;
-            guna2Button1.Text = "Login";
+            linkLabel1.AutoSize = true;
+            linkLabel1.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Pixel);
+            linkLabel1.ForeColor = Color.FromArgb(213, 213, 213);
+            linkLabel1.LinkColor = Color.FromArgb(213, 213, 213);
+            linkLabel1.Location = new Point(40, 435);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(91, 21);
+            linkLabel1.TabIndex = 4;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "linkLabel1";
+            linkLabel1.Visible = false;
+            // 
+            // btn_Login
+            // 
+            btn_Login.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btn_Login.Animated = true;
+            btn_Login.BorderRadius = 4;
+            btn_Login.CustomizableEdges = customizableEdges1;
+            btn_Login.DisabledState.BorderColor = Color.DarkGray;
+            btn_Login.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Login.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Login.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Login.FillColor = Color.FromArgb(255, 209, 0);
+            btn_Login.Font = new Font("Arial", 23F, FontStyle.Bold, GraphicsUnit.Pixel);
+            btn_Login.ForeColor = Color.Black;
+            btn_Login.HoverState.BorderColor = Color.Red;
+            btn_Login.HoverState.FillColor = Color.Blue;
+            btn_Login.Location = new Point(27, 470);
+            btn_Login.Name = "btn_Login";
+            btn_Login.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btn_Login.Size = new Size(431, 50);
+            btn_Login.TabIndex = 2;
+            btn_Login.Text = "Login";
+            btn_Login.Click += btn_Login_Click;
             // 
             // label4
             // 
@@ -135,7 +155,7 @@
             label4.Location = new Point(27, 414);
             label4.Name = "label4";
             label4.Size = new Size(153, 21);
-            label4.TabIndex = 4;
+            label4.TabIndex = 3;
             label4.Text = "forget password ?";
             // 
             // label3
@@ -150,32 +170,32 @@
             label3.TabIndex = 3;
             label3.Text = "Password";
             // 
-            // guna2TextBox2
+            // tb_Password
             // 
-            guna2TextBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2TextBox2.BorderRadius = 4;
-            guna2TextBox2.CustomizableEdges = customizableEdges3;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FillColor = Color.FromArgb(44, 44, 44);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(255, 209, 0);
-            guna2TextBox2.Font = new Font("Calibri Light", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2TextBox2.ForeColor = Color.White;
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(255, 209, 0);
-            guna2TextBox2.Location = new Point(27, 352);
-            guna2TextBox2.Margin = new Padding(10);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PasswordChar = '●';
-            guna2TextBox2.PlaceholderForeColor = Color.FromArgb(95, 95, 95);
-            guna2TextBox2.PlaceholderText = "●●●●●●●●●●●●●";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2TextBox2.Size = new Size(431, 52);
-            guna2TextBox2.TabIndex = 2;
-            guna2TextBox2.TextOffset = new Point(24, 0);
+            tb_Password.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tb_Password.BorderRadius = 4;
+            tb_Password.CustomizableEdges = customizableEdges3;
+            tb_Password.DefaultText = "";
+            tb_Password.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            tb_Password.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            tb_Password.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            tb_Password.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            tb_Password.FillColor = Color.FromArgb(44, 44, 44);
+            tb_Password.FocusedState.BorderColor = Color.FromArgb(255, 209, 0);
+            tb_Password.Font = new Font("Calibri Light", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            tb_Password.ForeColor = Color.White;
+            tb_Password.HoverState.BorderColor = Color.FromArgb(255, 209, 0);
+            tb_Password.Location = new Point(27, 352);
+            tb_Password.Margin = new Padding(10);
+            tb_Password.Name = "tb_Password";
+            tb_Password.PasswordChar = '●';
+            tb_Password.PlaceholderForeColor = Color.FromArgb(95, 95, 95);
+            tb_Password.PlaceholderText = "●●●●●●●●●●●●●";
+            tb_Password.SelectedText = "";
+            tb_Password.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            tb_Password.Size = new Size(431, 52);
+            tb_Password.TabIndex = 1;
+            tb_Password.TextOffset = new Point(24, 0);
             // 
             // label2
             // 
@@ -189,32 +209,33 @@
             label2.TabIndex = 1;
             label2.Text = "User";
             // 
-            // guna2TextBox1
+            // tb_Email
             // 
-            guna2TextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2TextBox1.BorderRadius = 4;
-            guna2TextBox1.CustomizableEdges = customizableEdges5;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FillColor = Color.FromArgb(44, 44, 44);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(255, 209, 0);
-            guna2TextBox1.Font = new Font("Calibri Light", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2TextBox1.ForeColor = Color.White;
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(255, 209, 0);
-            guna2TextBox1.Location = new Point(27, 226);
-            guna2TextBox1.Margin = new Padding(10);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderForeColor = Color.FromArgb(95, 95, 95);
-            guna2TextBox1.PlaceholderText = "e.g email@gmail.com";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2TextBox1.Size = new Size(431, 52);
-            guna2TextBox1.TabIndex = 0;
-            guna2TextBox1.TextOffset = new Point(24, 0);
+            tb_Email.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tb_Email.BorderRadius = 4;
+            tb_Email.CustomizableEdges = customizableEdges5;
+            tb_Email.DefaultText = "";
+            tb_Email.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            tb_Email.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            tb_Email.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            tb_Email.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            tb_Email.FillColor = Color.FromArgb(44, 44, 44);
+            tb_Email.FocusedState.BorderColor = Color.FromArgb(255, 209, 0);
+            tb_Email.Font = new Font("Calibri Light", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            tb_Email.ForeColor = Color.White;
+            tb_Email.HoverState.BorderColor = Color.FromArgb(255, 209, 0);
+            tb_Email.Location = new Point(27, 226);
+            tb_Email.Margin = new Padding(10);
+            tb_Email.Name = "tb_Email";
+            tb_Email.PasswordChar = '\0';
+            tb_Email.PlaceholderForeColor = Color.FromArgb(95, 95, 95);
+            tb_Email.PlaceholderText = "e.g email@gmail.com";
+            tb_Email.SelectedText = "";
+            tb_Email.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            tb_Email.Size = new Size(431, 52);
+            tb_Email.TabIndex = 0;
+            tb_Email.TextOffset = new Point(24, 0);
+            tb_Email.Load += guna2TextBox1_Load;
             // 
             // label1
             // 
@@ -259,13 +280,14 @@
         private Guna.UI2.WinForms.Guna2Panel pnl_Main;
         private Guna.UI2.WinForms.Guna2Panel pnl_Right;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnl_LoginWindow;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btn_Login;
         private Label label4;
         private Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox tb_Password;
         private Label label2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox tb_Email;
         private Label label1;
         private Guna.UI2.WinForms.Guna2Panel pnl_Left;
+        private LinkLabel linkLabel1;
     }
 }

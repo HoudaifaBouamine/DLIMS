@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Presentation_Layer_Windows_App.Testing
+namespace UserControls
 {
     public partial class ucLogin : UserControl
     {
@@ -43,6 +43,21 @@ namespace Presentation_Layer_Windows_App.Testing
         private void pnl_Right_Paint_1(object sender, PaintEventArgs e)
         {
             pnl_Left.Width = pnl_Main.Width / 2;
+        }
+
+        private void guna2TextBox1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            ucMain main = new ucMain();
+            this.Parent.Controls.Add(main);
+            this.Visible = false;
+            this.Dock = DockStyle.Fill;
+            main.Show();
+            main.BringToFront();
         }
     }
 }

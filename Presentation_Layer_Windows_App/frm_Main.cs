@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UserControls;
 
 namespace Presentation_Layer_Windows_App.Testing
 {
@@ -22,7 +23,8 @@ namespace Presentation_Layer_Windows_App.Testing
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             //
 
-            ucLogin test = new ucLogin();
+            ucMain test = new ucMain();
+            //ucLogin test = new ucLogin();
             pnl_MainContainer.Controls.Add(test);
             test.Dock = DockStyle.Fill;
             test.Show();

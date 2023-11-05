@@ -57,32 +57,6 @@
             "rid": "win"
           }
         }
-      },
-      "Business_Layer/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "compile": {
-          "bin/placeholder/Business_Layer.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Business_Layer.dll": {}
-        }
-      },
-      "UserControls/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Guna.UI2.WinForms": "2.0.4.5"
-        },
-        "compile": {
-          "bin/placeholder/UserControls.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/UserControls.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WindowsForms"
-        ]
       }
     }
   },
@@ -163,23 +137,11 @@
         "system.management.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "Business_Layer/1.0.0": {
-      "type": "project",
-      "path": "../Business_Layer/Business_Layer.csproj",
-      "msbuildProject": "../Business_Layer/Business_Layer.csproj"
-    },
-    "UserControls/1.0.0": {
-      "type": "project",
-      "path": "../UserControls/UserControls.csproj",
-      "msbuildProject": "../UserControls/UserControls.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
-      "Business_Layer >= 1.0.0",
-      "Guna.UI2.WinForms >= 2.0.4.5",
-      "UserControls >= 1.0.0"
+      "Guna.UI2.WinForms >= 2.0.4.5"
     ]
   },
   "packageFolders": {
@@ -188,11 +150,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj",
-      "projectName": "Presentation_Layer_Windows_App",
-      "projectPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj",
+      "projectUniqueName": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\UserControls\\UserControls.csproj",
+      "projectName": "UserControls",
+      "projectPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\UserControls\\UserControls.csproj",
       "packagesPath": "C:\\Users\\houda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Presentation_Layer_Windows_App\\obj\\",
+      "outputPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\UserControls\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\houda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -208,14 +170,7 @@
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
-          "projectReferences": {
-            "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Business_Layer\\Business_Layer.csproj": {
-              "projectPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Business_Layer\\Business_Layer.csproj"
-            },
-            "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\UserControls\\UserControls.csproj": {
-              "projectPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\UserControls\\UserControls.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

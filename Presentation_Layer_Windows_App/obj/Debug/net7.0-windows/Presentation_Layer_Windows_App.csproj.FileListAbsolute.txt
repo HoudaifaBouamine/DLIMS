@@ -36,4 +36,7 @@ C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_
 C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\obj\Debug\net7.0-windows\ref\Presentation_Layer_Windows_App.dll
 C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\obj\Debug\net7.0-windows\Presentation_Layer_Windows_App.Properties.Resources.resources
 C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\obj\Debug\net7.0-windows\Presentation_Layer_Windows_App.Testing.frm_Main.resources
-C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\obj\Debug\net7.0-windows\Presentation_Layer_Windows_App.Testing.ucLogin.resources
+C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\bin\Debug\net7.0-windows\Business_Layer.dll
+C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\bin\Debug\net7.0-windows\UserControls.dll
+C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\bin\Debug\net7.0-windows\Business_Layer.pdb
+C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\bin\Debug\net7.0-windows\UserControls.pdb

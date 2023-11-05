@@ -7,8 +7,5 @@
     <Compile Update="frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ucLogin.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
   </ItemGroup>
 </Project>
