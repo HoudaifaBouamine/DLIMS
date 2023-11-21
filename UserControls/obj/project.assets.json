@@ -150,11 +150,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\UserControls\\UserControls.csproj",
+      "projectUniqueName": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\UserControls\\UserControls.csproj",
       "projectName": "UserControls",
-      "projectPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\UserControls\\UserControls.csproj",
+      "projectPath": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\UserControls\\UserControls.csproj",
       "packagesPath": "C:\\Users\\houda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\UserControls\\obj\\",
+      "outputPath": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\UserControls\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\houda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -207,7 +207,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -58,16 +58,6 @@
           }
         }
       },
-      "Business_Layer/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "compile": {
-          "bin/placeholder/Business_Layer.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Business_Layer.dll": {}
-        }
-      },
       "UserControls/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -164,11 +154,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Business_Layer/1.0.0": {
-      "type": "project",
-      "path": "../Business_Layer/Business_Layer.csproj",
-      "msbuildProject": "../Business_Layer/Business_Layer.csproj"
-    },
     "UserControls/1.0.0": {
       "type": "project",
       "path": "../UserControls/UserControls.csproj",
@@ -177,7 +162,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
-      "Business_Layer >= 1.0.0",
+      "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\Business_Layer\\Business_Layer.csproj",
       "Guna.UI2.WinForms >= 2.0.4.5",
       "UserControls >= 1.0.0"
     ]
@@ -188,11 +173,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj",
+      "projectUniqueName": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj",
       "projectName": "Presentation_Layer_Windows_App",
-      "projectPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj",
+      "projectPath": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj",
       "packagesPath": "C:\\Users\\houda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Presentation_Layer_Windows_App\\obj\\",
+      "outputPath": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\Presentation_Layer_Windows_App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\houda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -209,11 +194,11 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Business_Layer\\Business_Layer.csproj": {
-              "projectPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Business_Layer\\Business_Layer.csproj"
+            "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\Business_Layer\\Business_Layer.csproj": {
+              "projectPath": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\Business_Layer\\Business_Layer.csproj"
             },
-            "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\UserControls\\UserControls.csproj": {
-              "projectPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\UserControls\\UserControls.csproj"
+            "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\UserControls\\UserControls.csproj": {
+              "projectPath": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\UserControls\\UserControls.csproj"
             }
           }
         }
@@ -252,8 +237,19 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\Business_Layer\\Business_Layer.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\Business_Layer\\Business_Layer.csproj",
+      "targetGraphs": [
+        "net7.0-windows7.0"
+      ]
+    }
+  ]
 }

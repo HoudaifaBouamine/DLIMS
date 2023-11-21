@@ -1,0 +1,12 @@
+C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\bin\Debug\net8.0\DVLD.DataAccess.deps.json
+C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\bin\Debug\net8.0\DVLD.DataAccess.dll
+C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\bin\Debug\net8.0\DVLD.DataAccess.pdb
+C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\obj\Debug\net8.0\DVLD.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\obj\Debug\net8.0\DVLD.DataAccess.AssemblyInfoInputs.cache
+C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\obj\Debug\net8.0\DVLD.DataAccess.AssemblyInfo.cs
+C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\obj\Debug\net8.0\DVLD.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\obj\Debug\net8.0\DVLD.DataAccess.sourcelink.json
+C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\obj\Debug\net8.0\DVLD.DataAccess.dll
+C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\obj\Debug\net8.0\refint\DVLD.DataAccess.dll
+C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\obj\Debug\net8.0\DVLD.DataAccess.pdb
+C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\obj\Debug\net8.0\ref\DVLD.DataAccess.dll

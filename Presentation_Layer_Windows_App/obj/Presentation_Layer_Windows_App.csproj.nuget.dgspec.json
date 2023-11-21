@@ -1,72 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj": {}
+    "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Business_Layer\\Business_Layer.csproj": {
+    "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Business_Layer\\Business_Layer.csproj",
-        "projectName": "Business_Layer",
-        "projectPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Business_Layer\\Business_Layer.csproj",
-        "packagesPath": "C:\\Users\\houda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Business_Layer\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\houda\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net7.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj",
+        "projectUniqueName": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj",
         "projectName": "Presentation_Layer_Windows_App",
-        "projectPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj",
+        "projectPath": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\Presentation_Layer_Windows_App\\Presentation_Layer_Windows_App.csproj",
         "packagesPath": "C:\\Users\\houda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Presentation_Layer_Windows_App\\obj\\",
+        "outputPath": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\Presentation_Layer_Windows_App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\houda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,11 +28,11 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Business_Layer\\Business_Layer.csproj": {
-                "projectPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\Business_Layer\\Business_Layer.csproj"
+              "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\Business_Layer\\Business_Layer.csproj": {
+                "projectPath": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\Business_Layer\\Business_Layer.csproj"
               },
-              "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\UserControls\\UserControls.csproj": {
-                "projectPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\UserControls\\UserControls.csproj"
+              "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\UserControls\\UserControls.csproj": {
+                "projectPath": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\UserControls\\UserControls.csproj"
               }
             }
           }
@@ -126,18 +71,18 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\UserControls\\UserControls.csproj": {
+    "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\UserControls\\UserControls.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\UserControls\\UserControls.csproj",
+        "projectUniqueName": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\UserControls\\UserControls.csproj",
         "projectName": "UserControls",
-        "projectPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\UserControls\\UserControls.csproj",
+        "projectPath": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\UserControls\\UserControls.csproj",
         "packagesPath": "C:\\Users\\houda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\houda\\Desktop\\Driving_And_Vehicle_License_Departmen\\UserControls\\obj\\",
+        "outputPath": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\UserControls\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\houda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -190,7 +135,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
