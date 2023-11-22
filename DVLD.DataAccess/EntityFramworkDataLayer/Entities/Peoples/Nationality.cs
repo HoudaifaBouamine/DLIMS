@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities
+namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
 {
     public class Nationality
     {
