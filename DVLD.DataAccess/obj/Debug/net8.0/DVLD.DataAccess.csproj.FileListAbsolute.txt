@@ -10,3 +10,6 @@ C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataA
 C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\obj\Debug\net8.0\refint\DVLD.DataAccess.dll
 C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\obj\Debug\net8.0\DVLD.DataAccess.pdb
 C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\obj\Debug\net8.0\ref\DVLD.DataAccess.dll
+C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\bin\Debug\net8.0\DVLD.DataAccess.runtimeconfig.json
+C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\obj\Debug\net8.0\DVLD.DataAccess.csproj.AssemblyReference.cache
+C:\Users\houda\Desktop\Drivers_License_Issuance_And_Management_System\DVLD.DataAccess\obj\Debug\net8.0\DVLD.DataAccess.genruntimeconfig.cache

@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="EntityFramworkDataLayer\Data\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
 
