@@ -15,4 +15,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DVLD.DataAccess\DVLD.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>

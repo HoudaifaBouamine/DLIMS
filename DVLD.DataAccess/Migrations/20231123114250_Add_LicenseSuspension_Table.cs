@@ -47,4 +47,5 @@ namespace DVLD.DataAccess.Migrations
                 name: "LicenseSuspensions");
         }
     }
+
 }
