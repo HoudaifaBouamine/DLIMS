@@ -4,6 +4,7 @@ using DVLD.DataAccess.EntityFramworkDataLayer.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DVLD.DataAccess.Migrations
 {
     [DbContext(typeof(dbContextDVLD))]
-    partial class dbContextDVLDModelSnapshot : ModelSnapshot
+    [Migration("20231124230246_Creating_Applicatin_Table")]
+    partial class Creating_Applicatin_Table
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

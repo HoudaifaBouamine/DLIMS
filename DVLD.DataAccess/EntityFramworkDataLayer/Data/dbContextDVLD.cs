@@ -25,6 +25,7 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Data
         public DbSet<LicenseSuspension> LicenseSuspensions { get; set; } = null!;
 
         public DbSet<User> Users { get; set; } = null!;
+        public DbSet<Application> Applications { get; set; } = null!;
 
         private readonly string ConnectionString = "Data Source=.;Initial Catalog=DVLD_db;User Id=DESKTOP-OCJUBFL\\houda;Password=sa123456;Encrypt=false;Trusted_Connection=Yes;";
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
