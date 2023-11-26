@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Applications.ApplicationTests
+namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Applications.ApplicationTestsTypes
 {
     public class VisionTest
     {

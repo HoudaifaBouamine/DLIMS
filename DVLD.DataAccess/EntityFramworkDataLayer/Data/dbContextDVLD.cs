@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DVLD.DataAccess.EntityFramworkDataLayer.Entities.License;
 using DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples;
+using DVLD.DataAccess.EntityFramworkDataLayer.Entities.Applications.ApplicationTestsTypes;
 
 
 namespace DVLD.DataAccess.EntityFramworkDataLayer.Data
@@ -23,6 +24,10 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Data
         public DbSet<Nationality> Nationalities { get; set; } = null!;
         public DbSet<Person> Persons { get; set; } = null!;
         public DbSet<LicenseSuspension> LicenseSuspensions { get; set; } = null!;
+        public DbSet<PracticalTest> PracticalTests { get; set; } = null!;
+        public DbSet<VisionTest> VisionTests { get; set; } = null!;
+        public DbSet<WritenTest> WritenTests { get; set; } = null!;
+
 
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<Application> Applications { get; set; } = null!;

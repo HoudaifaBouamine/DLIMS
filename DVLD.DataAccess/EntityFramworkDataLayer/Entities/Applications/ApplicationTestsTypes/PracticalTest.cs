@@ -6,14 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Applications.ApplicationTests
+namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Applications.ApplicationTestsTypes
 {
-    public class WritenTest
+
+
+    public class PracticalTest
     {
         [Key]
-        [Column(nameof(WritenTest_Id))]
-        public int WritenTest_Id { get; set; }
-
+        [Column(nameof(PracticalTest_Id))]
+        public int PracticalTest_Id { get; set; }
 
         [ForeignKey(nameof(ApplicationTests))]
         [Column(nameof(ApplicationTests_Id))]
@@ -27,12 +28,10 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Applications.Applicat
         public ApplicationTestFees Fees { get; set; } = null!;
 
 
-        public DateTime TestTime { get; set; }
+        public DateTime AppointmentTime { get; set; }
+        public DateTime? RealTestTime { get; set; } = null;
 
         public bool IsPassed { get; set; }
-
-        [Column(TypeName = "decimal(3,2)")]
-        public float? Mark { get; set; } = null;
 
     }
 }
