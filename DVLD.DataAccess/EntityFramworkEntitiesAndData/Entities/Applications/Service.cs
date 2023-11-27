@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities
+namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Applications
 {
     public class Service
     {
         [Key]
         [Column("Service_Id")]
-        public int Service_Id {  get; set; }
+        public int Service_Id { get; set; }
 
         [Required]
         [MaxLength(100)]

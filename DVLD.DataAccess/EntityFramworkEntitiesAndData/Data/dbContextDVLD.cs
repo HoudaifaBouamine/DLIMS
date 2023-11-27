@@ -11,7 +11,8 @@ using DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples;
 using DVLD.DataAccess.EntityFramworkDataLayer.Entities.Applications.ApplicationTestsTypes;
 
 
-namespace DVLD.DataAccess.EntityFramworkDataLayer.Data
+namespace DVLD.DataAccess.EntityFramworkDataLayer
+    .Data
 {
     public class dbContextDVLD : DbContext
     {
