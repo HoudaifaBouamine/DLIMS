@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\DVLD\\DVLD.Api.csproj": {}
+    "C:\\Users\\houda\\Desktop\\Projects\\Practice\\Drivers_License_Issuance_And_Management_System\\DVLD\\DVLD.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\DVLD.DataAccess\\DVLD.DataAccess.csproj": {
+    "C:\\Users\\houda\\Desktop\\Projects\\Practice\\Drivers_License_Issuance_And_Management_System\\DVLD.DataAccess\\DVLD.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\DVLD.DataAccess\\DVLD.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\houda\\Desktop\\Projects\\Practice\\Drivers_License_Issuance_And_Management_System\\DVLD.DataAccess\\DVLD.DataAccess.csproj",
         "projectName": "DVLD.DataAccess",
-        "projectPath": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\DVLD.DataAccess\\DVLD.DataAccess.csproj",
+        "projectPath": "C:\\Users\\houda\\Desktop\\Projects\\Practice\\Drivers_License_Issuance_And_Management_System\\DVLD.DataAccess\\DVLD.DataAccess.csproj",
         "packagesPath": "C:\\Users\\houda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\DVLD.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\houda\\Desktop\\Projects\\Practice\\Drivers_License_Issuance_And_Management_System\\DVLD.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\houda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -77,14 +77,14 @@
         }
       }
     },
-    "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\DVLD\\DVLD.Api.csproj": {
+    "C:\\Users\\houda\\Desktop\\Projects\\Practice\\Drivers_License_Issuance_And_Management_System\\DVLD\\DVLD.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\DVLD\\DVLD.Api.csproj",
+        "projectUniqueName": "C:\\Users\\houda\\Desktop\\Projects\\Practice\\Drivers_License_Issuance_And_Management_System\\DVLD\\DVLD.Api.csproj",
         "projectName": "DVLD.Api",
-        "projectPath": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\DVLD\\DVLD.Api.csproj",
+        "projectPath": "C:\\Users\\houda\\Desktop\\Projects\\Practice\\Drivers_License_Issuance_And_Management_System\\DVLD\\DVLD.Api.csproj",
         "packagesPath": "C:\\Users\\houda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\DVLD\\obj\\",
+        "outputPath": "C:\\Users\\houda\\Desktop\\Projects\\Practice\\Drivers_License_Issuance_And_Management_System\\DVLD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\houda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -101,8 +101,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\DVLD.DataAccess\\DVLD.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\houda\\Desktop\\Drivers_License_Issuance_And_Management_System\\DVLD.DataAccess\\DVLD.DataAccess.csproj"
+              "C:\\Users\\houda\\Desktop\\Projects\\Practice\\Drivers_License_Issuance_And_Management_System\\DVLD.DataAccess\\DVLD.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\houda\\Desktop\\Projects\\Practice\\Drivers_License_Issuance_And_Management_System\\DVLD.DataAccess\\DVLD.DataAccess.csproj"
               }
             }
           }

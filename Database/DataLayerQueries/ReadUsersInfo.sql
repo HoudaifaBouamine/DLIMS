@@ -1,0 +1,1 @@
+﻿SELECT * FROM Users u JOIN Persons p ON u.Person_Id = p.Person_Id;
