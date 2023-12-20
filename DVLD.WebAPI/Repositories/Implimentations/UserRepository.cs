@@ -1,7 +1,7 @@
-﻿using DVLD.DataAccess.EntityFramworkDataLayer.Data;
+﻿using Dapper;
+using DVLD.DataAccess.EntityFramworkDataLayer.Data;
 using DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples;
 using DVLD.DataAccess.Repositories.Interfaces;
-using DVLD.Models.Dtos.User;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -26,7 +26,22 @@ namespace DVLD.DataAccess.Repositories.Implimentations
 
         public async Task<User?> ReadUser(int user_id)
         {
-            return null;
+            using var connection = new SqlConnection(_dbContextDVLD.ConnectionStringName);
+            User? user = (await connection.QueryAsync<User, Person, User>
+                (
+                    "SELECT u.*,null as Sep,p.* " +
+                    "FROM  Users u JOIN Persons p " +
+                    "ON u.Person_Id = p.Person_Id " +
+                    $"WHERE u.User_Id = {user_id}",
+                    (user,person) =>
+                    {
+                        user.Person = person;
+                        return user;
+                    },
+                    splitOn:"Sep"
+                )).FirstOrDefault();
+
+            return user;
         }
 
         public async Task<User?> ReadUserDto(int id)

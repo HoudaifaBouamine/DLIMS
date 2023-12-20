@@ -31,10 +31,17 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<Application> Applications { get; set; } = null!;
 
-        private readonly string ConnectionString = "Data Source=.;Initial Catalog=DVLD_db;User Id=DESKTOP-OCJUBFL\\houda;Password=sa123456;Encrypt=false;Trusted_Connection=Yes;";
+        public string ConnectionStringName { get;  }
+
+        private readonly IConfiguration _configuration;
+        public dbContextDVLD(IConfiguration configuration)
+        {
+            _configuration = configuration;
+            ConnectionStringName = _configuration.GetConnectionString("DefaultConnection")!;
+        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(ConnectionString);
+            optionsBuilder.UseSqlServer(ConnectionStringName);
             base.OnConfiguring(optionsBuilder);
         }
     }
