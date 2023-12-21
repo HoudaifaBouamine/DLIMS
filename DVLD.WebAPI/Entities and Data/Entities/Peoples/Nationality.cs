@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD.DataAccess.EntityFramworkDataLayer.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -25,4 +26,43 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
         // NOTE (Houdaifa) : Add lists
 
     }
+
+    public class NationalityService 
+    {
+        // Because the nationalities are constant , it is waste to do join to get it every time instead let it in the main memory
+
+        private static dbContextDVLD? _dbContextDVLD = null;
+        public NationalityService(dbContextDVLD dbContextDVLD)
+        {
+            if(_dbContextDVLD == null)
+                _dbContextDVLD = dbContextDVLD;
+        }
+        private static Dictionary<int, Nationality>? Nationalities { get; set; } = null;
+
+        public static Nationality? GetNationalityById(int nationality_Id)
+        {
+            if(_dbContextDVLD == null)
+            {
+                return null;
+            }
+
+            if(Nationalities == null)
+            {
+                Nationalities = new Dictionary<int, Nationality>();
+
+                var nalist = _dbContextDVLD!.Nationalities.ToList();
+
+                foreach (var na in nalist)
+                {
+                    Nationalities.Add(na.Nationality_Id, na);
+                }
+            }
+
+            return Nationalities[nationality_Id];
+        }
+
+       
+       
+    }
+
 }

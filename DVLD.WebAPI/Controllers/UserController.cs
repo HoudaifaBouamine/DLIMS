@@ -18,9 +18,9 @@ namespace DVLD.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<User?>> GetUser(int id)
+        public async Task<ActionResult<UserReadDto?>> GetUser(int id)
         {
-            User? user = await _userRepository.ReadUser(id);
+            UserReadDto? user = await _userRepository.ReadUser(id);
 
             if(user == null)
             {
@@ -31,18 +31,6 @@ namespace DVLD.Api.Controllers
         }
 
 
-        [HttpGet("hi/{id}")]
-        public async Task<ActionResult<User?>> GetUserDto(int id)
-        {
-            User? user = await _userRepository.ReadUserDto(id);
-
-            if (user == null)
-            {
-                return NotFound($"User with id = [{id}] is Not Found");
-            }
-
-            return Ok(user);
-        }
-
+        
     }
 }

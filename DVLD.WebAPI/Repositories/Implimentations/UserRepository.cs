@@ -24,29 +24,42 @@ namespace DVLD.DataAccess.Repositories.Implimentations
             throw new NotImplementedException();
         }
 
-        public async Task<User?> ReadUser(int user_id)
+        public async Task<UserReadDto?> ReadUser(int user_id)
         {
-            using var connection = new SqlConnection(_dbContextDVLD.ConnectionStringName);
-            User? user = (await connection.QueryAsync<User, Person, User>
-                (
-                    "SELECT u.*,null as Sep,p.* " +
-                    "FROM  Users u JOIN Persons p " +
-                    "ON u.Person_Id = p.Person_Id " +
-                    $"WHERE u.User_Id = {user_id}",
-                    (user,person) =>
-                    {
-                        user.Person = person;
-                        return user;
-                    },
-                    splitOn:"Sep"
-                )).FirstOrDefault();
+            UserReadDto? user = null;
+
+            try
+            {
+
+                using var connection = new SqlConnection(_dbContextDVLD.ConnectionStringName);
+
+                user = (await connection.QueryAsync<User, Person, UserReadDto>
+                    (
+                        "SELECT u.*,null as Sep,p.* " +
+                        "FROM  Users u JOIN Persons p " +
+                        "ON u.Person_Id = p.Person_Id " +
+                        $"WHERE u.User_Id = {user_id}",
+                        (user, person) =>
+                        {
+                            if (user is not null && person is not null)
+                            {
+                                return user.ToDto(person);
+                            }
+
+                            return null;
+                        },
+                        splitOn: "Sep"
+                    )).FirstOrDefault();
+
+            }
+            catch (Exception ex)
+            {
+                string err = ex.Message;
+                int x = 1;
+            }
 
             return user;
         }
 
-        public async Task<User?> ReadUserDto(int id)
-        {
-            return null;
-        }
     }
 }

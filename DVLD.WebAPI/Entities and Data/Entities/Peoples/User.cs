@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
 {
-    public class User
+    public partial class User
     {
 
         [Key]
@@ -31,6 +31,55 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
         [MinLength(1)]
         public string Password { get; set; } = string.Empty;
     
+    }    
+    
+    public partial class User
+    {
+        public UserReadDto ToDto(Person person)
+        {
+            this.Person = person;
+
+            return new UserReadDto()
+            {
+                User_Id    = this.User_Id,
+                UserName   = this.UserName,
+                Permission = this.Permission,
+                Person     = this.Person.ToDto()
+            };
+        }   
     }
+
+    public class UserReadDto
+    {
+
+        public int User_Id { get; set; }
+        public string UserName { get; set; } = string.Empty;
+        public int Permission { get; set; }
+        public PersonReadDto Person { get; set; } = null!;
+        
+
+        /*
+            {
+              "user_Id": 1,
+              "person": {
+                "person_Id": 1,
+                "nationality": null,
+                "nationalNumber": "US123456",
+                "firstName": "John",
+                "secondName": "Michael",
+                "thirddName": null,
+                "lastName": "Doe",
+                "email": "john.doe@example.com",
+                "phone": "123-456-7890",
+                "addressLine": "123 Main St, City, Country",
+                "birthDate": "1980-01-15T00:00:00"
+              },
+              "userName": "JohnDoe123",
+              "permission": 1,
+            }
+        */
+    }
+
+
 
 }
