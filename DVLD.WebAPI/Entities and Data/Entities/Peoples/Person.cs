@@ -94,7 +94,6 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
 
     }
 
-
     public class PersonReadDto
     {
 

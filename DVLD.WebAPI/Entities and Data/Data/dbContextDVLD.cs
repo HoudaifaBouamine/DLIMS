@@ -31,17 +31,17 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<Application> Applications { get; set; } = null!;
 
-        public string ConnectionStringName { get;  }
+        public string ConnectionString { get;  }
 
         private readonly IConfiguration _configuration;
         public dbContextDVLD(IConfiguration configuration)
         {
             _configuration = configuration;
-            ConnectionStringName = _configuration.GetConnectionString("DefaultConnection")!;
+            ConnectionString = _configuration.GetConnectionString("DefaultConnection")!;
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(ConnectionStringName);
+            optionsBuilder.UseSqlServer(ConnectionString);
             base.OnConfiguring(optionsBuilder);
         }
     }

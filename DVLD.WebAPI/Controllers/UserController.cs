@@ -2,6 +2,7 @@
 using DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples;
 using DVLD.DataAccess.Repositories.Interfaces;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,9 +13,11 @@ namespace DVLD.Api.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
-        public UserController(IUserRepository userRepository) 
+        public dbContextDVLD _db { get; set; }
+        public UserController(IUserRepository userRepository,dbContextDVLD db) 
         {
             _userRepository = userRepository;
+            _db = db;
         }
 
         [HttpGet("{id}")]
@@ -31,6 +34,35 @@ namespace DVLD.Api.Controllers
         }
 
 
-        
+        [HttpPost("/login")]
+        public async Task<ActionResult<UserReadDto?>> LoginUser([FromBody] UserLoginDto userLogin)
+        {
+            UserReadDto? userRead = await _userRepository.ReadUser(userLogin.UserName,userLogin.Password);
+
+            if(userRead == null)
+            {
+                return BadRequest("Failed To Login");
+            }
+
+            return Ok( userRead );
+        }
+
+
+
+
+
+
+
+
+        // Tests
+
+        [HttpGet]// For test
+        public async Task<ActionResult<List<User>>> GetUsers()
+        {
+            return _db.Users.ToList();
+
+        }
+
+
     }
 }

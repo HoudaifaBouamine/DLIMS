@@ -31,7 +31,7 @@ namespace DVLD.DataAccess.Repositories.Implimentations
             try
             {
 
-                using var connection = new SqlConnection(_dbContextDVLD.ConnectionStringName);
+                using var connection = new SqlConnection(_dbContextDVLD.ConnectionString);
 
                 user = (await connection.QueryAsync<User, Person, UserReadDto>
                     (
@@ -59,6 +59,34 @@ namespace DVLD.DataAccess.Repositories.Implimentations
             }
 
             return user;
+        }
+
+        public async Task<UserReadDto?> ReadUser(string userName, string password)
+        {
+            UserReadDto? userRead = null;
+
+            try
+            {
+
+                using var connection = new SqlConnection(_dbContextDVLD.ConnectionString);
+                var parameters = new { UserName = userName, Password = password };
+                User? user = connection.Query<User>($"SELECT * FROM Users u WHERE u.UserName = @UserName AND Password = @Password", param: parameters).FirstOrDefault();
+
+                if(user != null)
+                {
+                    userRead = await ReadUser(user.User_Id);
+                }
+            }
+            catch (Exception ex)
+            {
+                string err = ex.Message;
+                userRead = null;
+                int x = 1;
+            }
+
+            
+
+            return userRead;
         }
 
     }
