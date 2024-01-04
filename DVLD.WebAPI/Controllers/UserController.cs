@@ -34,10 +34,10 @@ namespace DVLD.Api.Controllers
         }
 
 
-        [HttpPost("/login")]
+        [HttpPost("/api/login")]
         public async Task<ActionResult<UserReadDto?>> LoginUser([FromBody] UserLoginDto userLogin)
         {
-            UserReadDto? userRead = await _userRepository.ReadUser(userLogin.UserName,userLogin.Password);
+            UserReadDto? userRead = await _userRepository.ReadUserAsync(userLogin.UserName,userLogin.Password);
 
             if(userRead == null)
             {

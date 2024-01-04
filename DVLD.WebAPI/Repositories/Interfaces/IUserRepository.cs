@@ -10,7 +10,7 @@ namespace DVLD.DataAccess.Repositories.Interfaces
     public interface IUserRepository
     {
         Task<UserReadDto?> ReadUser(int id);
-        Task<UserReadDto?> ReadUser(string userName,string password);
+        Task<UserReadDto?> ReadUserAsync(string userName,string password);
         Task<User?> CreateUser(User user);
     }
 }

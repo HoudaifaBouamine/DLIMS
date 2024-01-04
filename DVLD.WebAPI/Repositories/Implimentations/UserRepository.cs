@@ -61,7 +61,7 @@ namespace DVLD.DataAccess.Repositories.Implimentations
             return user;
         }
 
-        public async Task<UserReadDto?> ReadUser(string userName, string password)
+        public async Task<UserReadDto?> ReadUserAsync(string userName, string password)
         {
             UserReadDto? userRead = null;
 
