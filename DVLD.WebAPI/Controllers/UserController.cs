@@ -17,14 +17,28 @@ namespace DVLD.Api.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
-        public dbContextDVLD _db { get; set; }
-        public UserController(IUserRepository userRepository,dbContextDVLD db) 
+        public readonly dbContextDVLD _db;
+
+        private readonly IAuthService _authService;
+
+        public UserController(IUserRepository userRepository,dbContextDVLD db, IAuthService authService) 
         {
             _userRepository = userRepository;
             _db = db;
+            _authService = authService;
         }
 
+
+
+
+
+
+
+
+
+
         [HttpGet("{id}")]
+        [Authorize(Policy = Auth.UserPolicy)]
         public async Task<ActionResult<UserReadDto?>> GetUser(int id)
         {
             UserReadDto? user = await _userRepository.ReadUser(id);
@@ -38,10 +52,23 @@ namespace DVLD.Api.Controllers
         }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         [HttpPost("/api/login")]
         public async Task<ActionResult<UserReadDto?>> LoginUser([FromBody] UserLoginDto userLogin)
         {
-            HttpContext ctx = HttpContext;
             UserReadDto? userRead = await _userRepository.ReadUserAsync(userLogin.UserName,userLogin.Password);
 
             if(userRead == null)
@@ -49,28 +76,28 @@ namespace DVLD.Api.Controllers
                 return BadRequest("Failed To Login");
             }
 
-            List<Claim> claims = new List<Claim>
-            {
-                new Claim("FirstName" ,userRead.Person.FirstName),
-                new Claim("LastName"  ,userRead.Person.LastName),
-                new Claim("Email"     ,userRead.Person.Email),
-                new Claim("UserName"  ,userRead.UserName),
-                new Claim("Permission",userRead.Permission.ToString())
-            };
-            ClaimsIdentity claimsIdentity = new(claims,Policies.AuthSheme);
-            ClaimsPrincipal claimsPrincipal = new(claimsIdentity);
-
-            await ctx.SignInAsync(Policies.AuthSheme, claimsPrincipal);
+            await HttpContext.SignInAsync(Auth.Cookie, _authService.CreateClaimsPrincipal(userRead,Auth.Cookie));
             return Ok( userRead );
 
         }
 
-        [Authorize(Policy = "AuthRequirmentTest")]
-        [HttpGet("/api/test")]
-        public async Task<ActionResult<string>> Test()
+
+
+
+
+
+        [HttpGet("/api/logout")]
+        public async Task<ActionResult> LogoutUser()
         {
-            return "your email is john.doe@example.com";
+            await HttpContext.SignOutAsync();
+            return Ok();
         }
+
+
+
+
+
+
 
 
 
