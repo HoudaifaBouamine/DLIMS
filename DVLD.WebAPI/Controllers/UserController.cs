@@ -1,10 +1,14 @@
 ﻿using DVLD.DataAccess.EntityFramworkDataLayer.Data;
 using DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples;
 using DVLD.DataAccess.Repositories.Interfaces;
+using DVLD.WebAPI.AuthService;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace DVLD.Api.Controllers
 {
@@ -37,6 +41,7 @@ namespace DVLD.Api.Controllers
         [HttpPost("/api/login")]
         public async Task<ActionResult<UserReadDto?>> LoginUser([FromBody] UserLoginDto userLogin)
         {
+            HttpContext ctx = HttpContext;
             UserReadDto? userRead = await _userRepository.ReadUserAsync(userLogin.UserName,userLogin.Password);
 
             if(userRead == null)
@@ -44,11 +49,28 @@ namespace DVLD.Api.Controllers
                 return BadRequest("Failed To Login");
             }
 
+            List<Claim> claims = new List<Claim>
+            {
+                new Claim("FirstName" ,userRead.Person.FirstName),
+                new Claim("LastName"  ,userRead.Person.LastName),
+                new Claim("Email"     ,userRead.Person.Email),
+                new Claim("UserName"  ,userRead.UserName),
+                new Claim("Permission",userRead.Permission.ToString())
+            };
+            ClaimsIdentity claimsIdentity = new(claims,Policies.AuthSheme);
+            ClaimsPrincipal claimsPrincipal = new(claimsIdentity);
+
+            await ctx.SignInAsync(Policies.AuthSheme, claimsPrincipal);
             return Ok( userRead );
+
         }
 
-
-
+        [Authorize(Policy = "AuthRequirmentTest")]
+        [HttpGet("/api/test")]
+        public async Task<ActionResult<string>> Test()
+        {
+            return "your email is john.doe@example.com";
+        }
 
 
 
