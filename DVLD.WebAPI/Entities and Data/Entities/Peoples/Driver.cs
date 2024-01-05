@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
 {
-    public class Driver
+    public partial class Driver
     {
 
         [Key]
@@ -19,7 +19,35 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
         [ForeignKey("Person")]
         [Column(nameof(Person_Id))]
         public int Person_Id { get; set; }
-        Person? Person { get; set; } = null;
+        public Person? Person { get; set; } = null;
+
+    }
+
+    public partial class Driver
+    {
+        public DriverReadDto ToDto(Person person)
+        {
+            this.Person = person;
+
+            return new DriverReadDto()
+            {
+                Driver_Id = this.Driver_Id,
+                Person = this.Person.ToDto()
+            };
+        }
+    }
+
+    public class DriverReadDto
+    {
+        public int Driver_Id { get; set; }
+        public PersonReadDto? Person { get; set; } = null;
+
+    }
+    
+    public class DriverLoginDto
+    {
+        public string Email { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
 
     }
 

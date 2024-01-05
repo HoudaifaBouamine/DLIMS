@@ -1,8 +1,0 @@
-C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\bin\Release\net7.0-windows\app.publish\Presentation_Layer_Windows_App.exe
-C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\bin\Release\net7.0-windows\app.publish\Presentation_Layer_Windows_App.dll
-C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\bin\Release\net7.0-windows\app.publish\Presentation_Layer_Windows_App.deps.json
-C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\bin\Release\net7.0-windows\app.publish\Presentation_Layer_Windows_App.runtimeconfig.json
-C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\bin\Release\net7.0-windows\app.publish\Presentation_Layer_Windows_App.pdb
-C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\bin\Release\net7.0-windows\app.publish\Guna.UI2.dll
-C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\bin\Release\net7.0-windows\app.publish\System.Management.dll
-C:\Users\houda\Desktop\Driving_And_Vehicle_License_Departmen\Presentation_Layer_Windows_App\bin\Release\net7.0-windows\app.publish\runtimes\win\lib\net7.0\System.Management.dll

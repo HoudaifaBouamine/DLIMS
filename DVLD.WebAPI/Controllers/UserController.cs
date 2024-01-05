@@ -21,7 +21,7 @@ namespace DVLD.Api.Controllers
 
         private readonly IAuthService _authService;
 
-        public UserController(IUserRepository userRepository,dbContextDVLD db, IAuthService authService) 
+        public UserController(IUserRepository userRepository, dbContextDVLD db, IAuthService authService)
         {
             _userRepository = userRepository;
             _db = db;
@@ -39,16 +39,16 @@ namespace DVLD.Api.Controllers
 
         [HttpGet("{id}")]
         [Authorize(Policy = Auth.UserPolicy)]
-        public async Task<ActionResult<UserReadDto?>> GetUser(int id)
+        public async Task<ActionResult<UserReadDto?>> Get(int id)
         {
             UserReadDto? user = await _userRepository.ReadUser(id);
 
-            if(user == null)
+            if (user == null)
             {
-                return NotFound($"User with id = [{ id }] is Not Found");
+                return NotFound($"User with id = [{id}] is Not Found");
             }
 
-            return Ok( user );
+            return Ok(user);
         }
 
 
@@ -66,18 +66,18 @@ namespace DVLD.Api.Controllers
 
 
 
-        [HttpPost("/api/login")]
-        public async Task<ActionResult<UserReadDto?>> LoginUser([FromBody] UserLoginDto userLogin)
+        [HttpPost("login")]
+        public async Task<ActionResult<UserReadDto?>> Login([FromBody] UserLoginDto userLogin)
         {
-            UserReadDto? userRead = await _userRepository.ReadUserAsync(userLogin.UserName,userLogin.Password);
+            UserReadDto? userRead = await _userRepository.ReadUserAsync(userLogin.UserName, userLogin.Password);
 
-            if(userRead == null)
+            if (userRead == null)
             {
                 return BadRequest("Failed To Login");
             }
 
-            await HttpContext.SignInAsync(Auth.Cookie, _authService.CreateClaimsPrincipal(userRead,Auth.Cookie));
-            return Ok( userRead );
+            await HttpContext.SignInAsync(Auth.UserCookie, _authService.CreateUserClaimsPrincipal(userRead, Auth.UserCookie));
+            return Ok(userRead);
 
         }
 
@@ -86,8 +86,8 @@ namespace DVLD.Api.Controllers
 
 
 
-        [HttpGet("/api/logout")]
-        public async Task<ActionResult> LogoutUser()
+        [HttpGet("logout")]
+        public async Task<ActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
             return Ok();
@@ -111,6 +111,8 @@ namespace DVLD.Api.Controllers
             return _db.Users.ToList();
 
         }
+
+
 
 
     }
