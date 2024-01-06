@@ -1,18 +1,11 @@
 ﻿using DVLD.DataAccess.EntityFramworkDataLayer.Entities.Applications;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DVLD.DataAccess.EntityFramworkDataLayer.Entities.License;
 using DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples;
 using DVLD.DataAccess.EntityFramworkDataLayer.Entities.Applications.ApplicationTestsTypes;
 
 
-namespace DVLD.DataAccess.EntityFramworkDataLayer
-    .Data
+namespace DVLD.DataAccess.EntityFramworkDataLayer.Data
 {
     public class dbContextDVLD : DbContext
     {
@@ -27,7 +20,7 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer
         public DbSet<LicenseSuspension> LicenseSuspensions { get; set; } = null!;
         public DbSet<PracticalTest> PracticalTests { get; set; } = null!;
         public DbSet<VisionTest> VisionTests { get; set; } = null!;
-        public DbSet<WritenTest> WritenTests { get; set; } = null!;
+        public DbSet<WritenTest> WritenTests { get; set;} = null!;
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<Application> Applications { get; set; } = null!;
 

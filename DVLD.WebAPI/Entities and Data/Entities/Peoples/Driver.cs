@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
 namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
@@ -21,6 +17,7 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
         public int Person_Id { get; set; }
         public Person? Person { get; set; } = null;
 
+        public string HashedPassword { get; set; } = string.Empty;
     }
 
     public partial class Driver
@@ -48,9 +45,5 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
     {
         public string Email { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
-
     }
-
-
 }
-
