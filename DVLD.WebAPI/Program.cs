@@ -17,21 +17,21 @@ builder.Services.AddScoped<IDriverRepository, DriverRepository>();
 builder.Services.AddSingleton<IAuthService, AuthService>();
 builder.Services.AddInstantAPIs();
 
-builder.Services.AddAuthentication(Auth.UserCookie)
-    .AddCookie(Auth.UserCookie)
-    .AddCookie(Auth.DriverCookie);
+builder.Services.AddAuthentication(Auth.Scheme.UserCookie)
+    .AddCookie(Auth.Scheme.UserCookie)
+    .AddCookie(Auth.Scheme.DriverCookie);
 
 builder.Services.AddAuthorization(builder =>
 {
-    builder.AddPolicy(Auth.UserPolicy, p =>
+    builder.AddPolicy(Auth.Policy.UserPolicy, p =>
     {
-        p.AddAuthenticationSchemes(Auth.UserCookie)
+        p.AddAuthenticationSchemes(Auth.Scheme.UserCookie)
             .RequireAuthenticatedUser();
     });
 
-    builder.AddPolicy(Auth.DriverPolicy, p =>
+    builder.AddPolicy(Auth.Policy.DriverPolicy, p =>
     {
-        p.AddAuthenticationSchemes(Auth.DriverCookie)
+        p.AddAuthenticationSchemes(Auth.Scheme.DriverCookie)
             .RequireAuthenticatedUser();
     });
 });
@@ -55,5 +55,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+app.Run("https://localhost:4001");
 

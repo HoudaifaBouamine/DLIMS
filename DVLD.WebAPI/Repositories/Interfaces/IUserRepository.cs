@@ -12,5 +12,6 @@ namespace DVLD.DataAccess.Repositories.Interfaces
         Task<UserReadDto?> ReadUser(int id);
         Task<UserReadDto?> ReadUserAsync(string userName,string password);
         Task<User?> CreateUser(User user);
+        
     }
 }

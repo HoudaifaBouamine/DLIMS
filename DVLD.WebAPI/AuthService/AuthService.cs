@@ -9,10 +9,10 @@ namespace DVLD.WebAPI.AuthService
         {
             List<Claim> claims = new List<Claim>
             {
-                new Claim("Id"          ,driverRead.Driver_Id.ToString()),
-                new Claim("FirstName"   ,driverRead.Person!.FirstName),
-                new Claim("LastName"    ,driverRead.Person.LastName),
-                new Claim("Email"       ,driverRead.Person.Email),
+                new ("Id"          ,driverRead.Driver_Id.ToString()),
+                new ("FirstName"   ,driverRead.Person!.FirstName),
+                new ("LastName"    ,driverRead.Person.LastName),
+                new ("Email"       ,driverRead.Person.Email),
             };
             ClaimsIdentity claimsIdentity = new(claims, AuthSchem);
             ClaimsPrincipal userClaimsPrincipal = new(claimsIdentity);
@@ -24,12 +24,12 @@ namespace DVLD.WebAPI.AuthService
         {
             List<Claim> claims = new List<Claim>
             {
-                new Claim("Id",userRead.User_Id.ToString()),
-                new Claim("FirstName" ,userRead.Person.FirstName),
-                new Claim("LastName"  ,userRead.Person.LastName),
-                new Claim("Email"     ,userRead.Person.Email),
-                new Claim("UserName"  ,userRead.UserName),
-                new Claim("Permission",userRead.Permission.ToString()),
+                new ("Id",userRead.User_Id.ToString()),
+                new ("FirstName" ,userRead.Person.FirstName),
+                new ("LastName"  ,userRead.Person.LastName),
+                new ("Email"     ,userRead.Person.Email),
+                new ("UserName"  ,userRead.UserName),
+                new ("Permission",userRead.Permission.ToString()),
             };
             ClaimsIdentity claimsIdentity = new(claims, AuthSchem);
             ClaimsPrincipal userClaimsPrincipal = new(claimsIdentity);

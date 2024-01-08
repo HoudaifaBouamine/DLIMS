@@ -2,6 +2,7 @@
 using DVLD.WebAPI.AuthService;
 using DVLD.WebAPI.Repositories.Interfaces;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DVLD.WebAPI.Controllers
@@ -31,8 +32,8 @@ namespace DVLD.WebAPI.Controllers
 
             await HttpContext.SignInAsync
                     (
-                        Auth.DriverCookie,
-                        _authService.CreateDriverClaimsPrincipal(driverRead, Auth.DriverCookie)
+                        Auth.Scheme.DriverCookie,
+                        _authService.CreateDriverClaimsPrincipal(driverRead, Auth.Scheme.DriverCookie)
                     );
 
             return Ok(driverRead);
@@ -55,10 +56,16 @@ namespace DVLD.WebAPI.Controllers
         [HttpGet("logout")]
         public async Task<string> Logout()
         {
-            await HttpContext.SignOutAsync(Auth.DriverCookie);
+            await HttpContext.SignOutAsync(Auth.Scheme.DriverCookie);
             return "Driver Logout";
         }
 
+        [HttpPut]
+        [Authorize(Policy =Auth.Policy.UserPolicy)]
+        public async Task Update()
+        {
 
+        }
+    
     }
 }

@@ -14,31 +14,15 @@ namespace DVLD.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class UserController(IUserRepository userRepository, AppDbContext db, IAuthService authService) : ControllerBase 
     {
-        private readonly IUserRepository _userRepository;
-        public readonly AppDbContext _db;
-
-        private readonly IAuthService _authService;
-
-        public UserController(IUserRepository userRepository, AppDbContext db, IAuthService authService)
-        {
-            _userRepository = userRepository;
-            _db = db;
-            _authService = authService;
-        }
-
-
-
-
-
-
-
-
+        private readonly IUserRepository _userRepository = userRepository;
+        private readonly AppDbContext _db = db;
+        private readonly IAuthService _authService = authService;
 
 
         [HttpGet("{id}")]
-        [Authorize(Policy = Auth.UserPolicy)]
+        [Authorize(Policy = Auth.Policy.UserPolicy)]
         public async Task<ActionResult<UserReadDto?>> Get(int id)
         {
             UserReadDto? user = await _userRepository.ReadUser(id);
@@ -76,7 +60,7 @@ namespace DVLD.Api.Controllers
                 return BadRequest("Failed To Login");
             }
 
-            await HttpContext.SignInAsync(Auth.UserCookie, _authService.CreateUserClaimsPrincipal(userRead, Auth.UserCookie));
+            await HttpContext.SignInAsync(Auth.Scheme.UserCookie, _authService.CreateUserClaimsPrincipal(userRead, Auth.Scheme.UserCookie));
             return Ok(userRead);
 
         }
