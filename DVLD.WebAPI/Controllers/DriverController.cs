@@ -9,16 +9,10 @@ namespace DVLD.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DriverController : ControllerBase
+    public class DriverController(IAuthService authService, IDriverRepository driverRepository) : ControllerBase
     {
-        private readonly IAuthService _authService;
-        private readonly IDriverRepository _driverRepository;
-
-        public DriverController(IAuthService authService, IDriverRepository driverRepository)
-        {
-            _authService = authService;
-            _driverRepository = driverRepository;
-        }
+        private readonly IAuthService _authService = authService;
+        private readonly IDriverRepository _driverRepository = driverRepository;
 
         [HttpPost("login")]
         public async Task<ActionResult<DriverReadDto>> Login([FromBody] DriverLoginDto loginDriver)

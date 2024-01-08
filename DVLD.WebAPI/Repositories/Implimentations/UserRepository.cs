@@ -12,13 +12,10 @@ using System.Threading.Tasks;
 
 namespace DVLD.DataAccess.Repositories.Implimentations
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository(AppDbContext dbContextDVLD) : IUserRepository
     {
-        private readonly AppDbContext _dbContextDVLD;
-        public UserRepository(AppDbContext dbContextDVLD) 
-        {
-            this._dbContextDVLD = dbContextDVLD;
-        }
+        private readonly AppDbContext _dbContextDVLD = dbContextDVLD;
+
         public Task<User?> CreateUser(User user)
         {
             throw new NotImplementedException();

@@ -34,8 +34,7 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
         private static AppDbContext? _dbContextDVLD = null;
         public NationalityService(AppDbContext dbContextDVLD)
         {
-            if(_dbContextDVLD == null)
-                _dbContextDVLD = dbContextDVLD;
+            _dbContextDVLD ??= dbContextDVLD;
         }
         private static Dictionary<int, Nationality>? Nationalities { get; set; } = null;
 
