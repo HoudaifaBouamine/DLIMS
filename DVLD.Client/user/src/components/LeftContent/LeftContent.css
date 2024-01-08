@@ -1,0 +1,8 @@
+.left-content{
+    width: 66%;
+    height: 100%;
+    border-radius: inherit;
+    gap:16px;
+    display: flex;
+    flex-direction: column;
+  }
