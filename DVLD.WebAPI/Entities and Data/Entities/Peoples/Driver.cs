@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure;
+﻿using DVLD.WebAPI.SecurityService;
+using Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -32,6 +33,20 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
                 Person = this.Person.ToDto()
             };
         }
+
+        public static Driver FromDto(DriverCreateDto driverCreate)
+        {
+            return new Driver
+            {
+                Driver_Id = default,
+                HashedPassword = SecurityService.HashPassword( driverCreate.Password ),
+                Person = Person.FromDto( driverCreate.Person! ),
+            };
+        }
+        public bool IsCorrectPassword(string password)
+        {
+            return SecurityService.VerifyPassword(HashedPassword,password);
+        }
     }
 
     public class DriverReadDto
@@ -39,6 +54,12 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
         public int Driver_Id { get; set; }
         public PersonReadDto? Person { get; set; } = null;
 
+    }
+    public class DriverCreateDto
+    {
+        public PersonCreateDto? Person { get; set; } = null;
+
+        public string Password { get; set; } = string.Empty;
     }
     
     public class DriverLoginDto

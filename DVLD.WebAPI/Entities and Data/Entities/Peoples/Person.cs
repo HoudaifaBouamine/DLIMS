@@ -64,7 +64,6 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
 
         
     }
-
     public partial class Person
     {
 
@@ -92,8 +91,26 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
             };
         }
 
-    }
+        public static Person FromDto(PersonCreateDto personCreate)
+        {
+            return new Person
+            {
+                Person_Id = default,
+                AddressLine = personCreate.AddressLine,
+                FirstName = personCreate.FirstName,
+                SecondName = personCreate.SecondName,
+                ThirddName = personCreate.ThirdName,
+                LastName = personCreate.LastName,
+                BirthDate = personCreate.BirthDate,
+                Email = personCreate.Email,
+                Phone = personCreate.Phone,
+                Nationality_Id = personCreate.Nationality_Id,
+                NationalNumber = personCreate.NationalNumber,
+                PersonalPictureURL = personCreate.PersonalPictureURL,
+            };
+        }
 
+    }
     public class PersonReadDto
     {
 
@@ -142,4 +159,49 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
         public string? PersonalPictureURL;
 
     }
+    public class PersonCreateDto
+    {
+        public int Nationality_Id { get; set; }
+
+        [MaxLength(50)]
+        public string NationalNumber { get; set; } = string.Empty;
+
+        [MaxLength(30)]
+        [MinLength(1)]
+        public string FirstName { get; set; } = string.Empty;
+
+        [MaxLength(30)]
+        [MinLength(1)]
+        public string? SecondName { get; set; } = null;
+
+        [MaxLength(30)]
+        [MinLength(1)]
+        public string? ThirdName { get; set; } = null;
+
+        [MaxLength(30)]
+        [MinLength(1)]
+        public string LastName { get; set; } = string.Empty;
+
+
+        [MaxLength(30)]
+        [MinLength(1)]
+        public string Email { get; set; } = string.Empty;
+
+
+        [MaxLength(20)]
+        [MinLength(1)]
+        public string Phone { get; set; } = string.Empty;
+
+
+        [MaxLength(100)]
+        [MinLength(1)]
+        public string AddressLine { get; set; } = string.Empty;
+
+        public DateTime BirthDate { get; set; }
+
+        [MaxLength(100)]
+        public string? PersonalPictureURL;
+
+    }
+
 }

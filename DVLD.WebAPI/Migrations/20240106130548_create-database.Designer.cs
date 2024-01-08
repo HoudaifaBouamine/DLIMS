@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DVLD.WebAPI.Migrations
 {
-    [DbContext(typeof(dbContextDVLD))]
+    [DbContext(typeof(AppDbContext))]
     [Migration("20240106130548_create-database")]
     partial class createdatabase
     {

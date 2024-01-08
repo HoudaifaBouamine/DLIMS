@@ -3,9 +3,6 @@ using DVLD.DataAccess.Repositories.Interfaces;
 using DVLD.DataAccess.Repositories.Implimentations;
 using DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples;
 using DVLD.WebAPI.AuthService;
-using System.Net.Mime;
-using System.Text;
-using Fritz.InstantAPIs;
 using DVLD.WebAPI.Repositories.Interfaces;
 using DVLD.WebAPI.Repositories.Implimentations;
 
@@ -14,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<dbContextDVLD>();
+builder.Services.AddDbContext<AppDbContext>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IDriverRepository, DriverRepository>();
 builder.Services.AddSingleton<IAuthService, AuthService>();
@@ -43,7 +40,7 @@ var app = builder.Build();
 
 #region SomeServiceBadInit
 
-new NationalityService(new dbContextDVLD(app.Configuration));
+new NationalityService(new AppDbContext(app.Configuration));
 
 #endregion
 

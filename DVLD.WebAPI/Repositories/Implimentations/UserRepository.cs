@@ -14,8 +14,8 @@ namespace DVLD.DataAccess.Repositories.Implimentations
 {
     public class UserRepository : IUserRepository
     {
-        private readonly dbContextDVLD _dbContextDVLD;
-        public UserRepository(dbContextDVLD dbContextDVLD) 
+        private readonly AppDbContext _dbContextDVLD;
+        public UserRepository(AppDbContext dbContextDVLD) 
         {
             this._dbContextDVLD = dbContextDVLD;
         }

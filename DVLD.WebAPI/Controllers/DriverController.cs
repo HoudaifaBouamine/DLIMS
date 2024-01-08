@@ -13,7 +13,7 @@ namespace DVLD.WebAPI.Controllers
         private readonly IAuthService _authService;
         private readonly IDriverRepository _driverRepository;
 
-        public DriverController(IAuthService authService,IDriverRepository driverRepository)
+        public DriverController(IAuthService authService, IDriverRepository driverRepository)
         {
             _authService = authService;
             _driverRepository = driverRepository;
@@ -22,14 +22,33 @@ namespace DVLD.WebAPI.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<DriverReadDto>> Login([FromBody] DriverLoginDto loginDriver)
         {
-            DriverReadDto? driverRead = await _driverRepository.ReadDriverAsync(loginDriver.Email,loginDriver.Password);
+            DriverReadDto? driverRead = await _driverRepository.LoginDriverAsync(loginDriver.Email, loginDriver.Password);
 
-            if(driverRead is null)
+            if (driverRead is null)
             {
                 return NotFound("Failed To Login");
             }
 
-            await HttpContext.SignInAsync(Auth.DriverCookie,_authService.CreateDriverClaimsPrincipal(driverRead,Auth.DriverCookie));
+            await HttpContext.SignInAsync
+                    (
+                        Auth.DriverCookie,
+                        _authService.CreateDriverClaimsPrincipal(driverRead, Auth.DriverCookie)
+                    );
+
+            return Ok(driverRead);
+        }
+
+        [HttpPost("register")]
+        public async Task<ActionResult<DriverReadDto>> Register([FromBody] DriverCreateDto driverCreate)
+        {
+            Driver driver = Driver.FromDto(driverCreate);
+            DriverReadDto? driverRead = await _driverRepository.CreateDriverAsync(driver);
+            
+            if(driverRead is null)
+            {
+                return BadRequest("Failed To register");
+            }
+
             return Ok(driverRead);
         }
         
@@ -39,5 +58,7 @@ namespace DVLD.WebAPI.Controllers
             await HttpContext.SignOutAsync(Auth.DriverCookie);
             return "Driver Logout";
         }
+
+
     }
 }

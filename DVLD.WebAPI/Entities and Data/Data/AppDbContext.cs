@@ -7,7 +7,7 @@ using DVLD.DataAccess.EntityFramworkDataLayer.Entities.Applications.ApplicationT
 
 namespace DVLD.DataAccess.EntityFramworkDataLayer.Data
 {
-    public class dbContextDVLD : DbContext
+    public class AppDbContext : DbContext
     {
         public DbSet<ApplicationStatus> ApplicationStatuses { get; set; } = null!;
         public DbSet<ApplicationTestFees> ApplicationsTestFees { get; set; } = null!;
@@ -27,7 +27,7 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Data
         public string ConnectionString { get;  }
 
         private readonly IConfiguration _configuration;
-        public dbContextDVLD(IConfiguration configuration)
+        public AppDbContext(IConfiguration configuration)
         {
             _configuration = configuration;
             ConnectionString = _configuration.GetConnectionString("DefaultConnection")!;

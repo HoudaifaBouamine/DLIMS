@@ -31,8 +31,8 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
     {
         // Because the nationalities are constant , it is waste to do join to get it every time instead let it in the main memory
 
-        private static dbContextDVLD? _dbContextDVLD = null;
-        public NationalityService(dbContextDVLD dbContextDVLD)
+        private static AppDbContext? _dbContextDVLD = null;
+        public NationalityService(AppDbContext dbContextDVLD)
         {
             if(_dbContextDVLD == null)
                 _dbContextDVLD = dbContextDVLD;

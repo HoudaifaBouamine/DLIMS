@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DVLD.WebAPI.Migrations
 {
-    [DbContext(typeof(dbContextDVLD))]
+    [DbContext(typeof(AppDbContext))]
     partial class dbContextDVLDModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

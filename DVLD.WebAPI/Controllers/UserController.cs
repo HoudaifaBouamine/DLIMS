@@ -17,11 +17,11 @@ namespace DVLD.Api.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
-        public readonly dbContextDVLD _db;
+        public readonly AppDbContext _db;
 
         private readonly IAuthService _authService;
 
-        public UserController(IUserRepository userRepository, dbContextDVLD db, IAuthService authService)
+        public UserController(IUserRepository userRepository, AppDbContext db, IAuthService authService)
         {
             _userRepository = userRepository;
             _db = db;

@@ -8,9 +8,9 @@ namespace DVLD.WebAPI.Repositories.Implimentations
 {
     public class DriverRepository : IDriverRepository
     {
-        private readonly dbContextDVLD _db;
+        private readonly AppDbContext _db;
 
-        public DriverRepository(dbContextDVLD db)
+        public DriverRepository(AppDbContext db)
         {
             _db = db;
         }
@@ -32,7 +32,7 @@ namespace DVLD.WebAPI.Repositories.Implimentations
             return driverRead;
         }
         
-        public async Task<DriverReadDto?> ReadDriverAsync(string email,string password)
+        public async Task<DriverReadDto?> LoginDriverAsync(string email,string password)
         {
             Person? person = await _db.Persons.Where(p => p.Email == email).FirstOrDefaultAsync();
 
@@ -50,8 +50,29 @@ namespace DVLD.WebAPI.Repositories.Implimentations
                 return null;
             }
 
+            if(! driver.IsCorrectPassword(password))
+            {
+                Debug.WriteLine("---> Password is wrong");
+                return null;
+            }
 
             return driver.ToDto(person);
         }
+    
+        public async Task<DriverReadDto?> CreateDriverAsync(Driver driver)
+        {
+            if(driver.Person is null)
+            {
+                return null;
+            }
+            _db.Persons.Add(driver.Person);
+            await _db.SaveChangesAsync();
+            
+            _db.Drivers.Add(driver);
+            await _db.SaveChangesAsync();
+
+            return driver.ToDto(driver.Person);
+        }
+
     }
 }
