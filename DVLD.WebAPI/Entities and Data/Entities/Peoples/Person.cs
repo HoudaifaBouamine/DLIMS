@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Security.Cryptography.Xml;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
 {
@@ -43,7 +39,7 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
         public string LastName { get; set; } =string.Empty;
 
 
-        [MaxLength(30)]
+        [MaxLength(100)]
         [MinLength(1)]
         public string Email {get; set; } =string.Empty;
 
@@ -60,7 +56,7 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
         public DateTime BirthDate { get; set; }
 
         [MaxLength(100)]
-        public string? PersonalPictureURL;
+        public string? PersonalPictureURL { get; set; }
 
         
     }
@@ -200,7 +196,7 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
         public DateTime BirthDate { get; set; }
 
         [MaxLength(100)]
-        public string? PersonalPictureURL;
+        public string? PersonalPictureURL { get; set; }
 
     }
 

@@ -74,5 +74,19 @@ namespace DVLD.WebAPI.Repositories.Implimentations
             return driver.ToDto(driver.Person);
         }
 
+        public async Task<List<DriverReadDto>> ReadDriversAsync()
+        {
+            List<Driver> drivers = await _db.Drivers.ToListAsync();
+
+            List<Person> people = await _db.Persons.ToListAsync();
+
+
+            var list = from d in drivers 
+                       join p in people
+                       on d.Person_Id equals p.Person_Id
+                       select d.ToDto(p);
+
+            return list.ToList();
+        }
     }
 }

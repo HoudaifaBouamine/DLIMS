@@ -60,6 +60,16 @@ namespace DVLD.WebAPI.Controllers
         {
 
         }
-    
+
+        [HttpGet("recent-added")]
+        public async Task<IEnumerable<DriversRecentAddedDto>> GetRecentAddedDrivers()
+        {
+            var list = await _driverRepository.ReadDriversAsync();
+
+            var outputList = from d in list
+                   select new DriversRecentAddedDto(d);
+
+            return outputList;
+        }
     }
 }

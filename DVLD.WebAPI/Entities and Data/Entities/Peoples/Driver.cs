@@ -67,4 +67,21 @@ namespace DVLD.DataAccess.EntityFramworkDataLayer.Entities.Peoples
         public string Email { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
     }
+
+    public class DriversRecentAddedDto
+    {
+        public int Id { get; set; }
+        public string FullName { get; set; } = string.Empty;
+        public string StartDate { get; set; } = string.Empty;
+        public string? AvatarUrl { get; set; } = string.Empty;
+
+        public DriversRecentAddedDto(DriverReadDto driver)
+        {
+            Id = driver.Driver_Id;
+            FullName = driver.Person!.FirstName + " " + driver.Person.LastName;
+            StartDate = "Not Found";
+            AvatarUrl = driver.Person.PersonalPictureURL;
+        }
+
+    }
 }
