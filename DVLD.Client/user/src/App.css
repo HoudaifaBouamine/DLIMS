@@ -30,13 +30,6 @@ body{
   height: 100%;
 }
 
-.side-bare{
-  width: 25%;
-  background-color: #222322;
-  border-radius: 12px;
-  margin:16px 0px 16px 16px;
-}
-
 .main-content .left-content .up-content .content-item{
   width: 50%;
   height: 100%;

@@ -1,0 +1,34 @@
+.table-container {
+    margin: 20px;
+  }
+  
+  .table-title {
+    color: #d6d7d6;
+  }
+  
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    color: #d6d7d6;
+    background-color: inherit;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .custom-table th {
+    font-weight: bold;
+  }
+  
+  .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+  }
+  
